@@ -92,22 +92,22 @@ nav a.cta-nav:hover{opacity:.9}
 .story-card .tag{display:inline-block;background:rgba(22,158,91,.2);color:#4FD68C;padding:3px 10px;border-radius:999px;font-size:11px;font-family:'Montserrat',sans-serif;font-weight:700;margin-top:10px}
 
 /* CALCULATOR */
-.calculator{padding:70px 0}
-.calculator h2{text-align:center;margin-bottom:12px}
-.calculator .subtitle{text-align:center;max-width:600px;margin:0 auto 40px}
-.calc-box{max-width:640px;margin:0 auto;background:var(--white);border:1px solid var(--border);border-radius:8px;padding:36px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
-.calc-row{margin-bottom:24px}
-.calc-row label{display:block;font-family:'Montserrat',sans-serif;font-weight:700;font-size:14px;margin-bottom:8px;color:var(--navy)}
-.calc-row select,.calc-row input[type="number"]{width:100%;padding:12px;border:1px solid var(--border);border-radius:var(--radius);font-size:16px;font-family:'Helvetica Neue',sans-serif;color:var(--navy);background:var(--white);appearance:auto}
+.calculator{padding:80px 0;background:var(--navy)}
+.calculator h2{text-align:center;color:var(--white);margin-bottom:12px}
+.calculator .subtitle{text-align:center;max-width:600px;margin:0 auto 40px;color:rgba(255,255,255,.6)}
+.calc-box{max-width:680px;margin:0 auto;background:var(--white);border-radius:12px;padding:40px;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.calc-row{margin-bottom:28px}
+.calc-row label{display:block;font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;margin-bottom:10px;color:var(--navy);letter-spacing:.04em;text-transform:uppercase}
+.calc-row select,.calc-row input[type="number"]{width:100%;padding:14px 16px;border:1.5px solid var(--border);border-radius:var(--radius);font-size:16px;font-family:'Helvetica Neue',sans-serif;color:var(--navy);background:var(--white);appearance:auto;transition:border-color .2s}
 .calc-row select:focus,.calc-row input:focus{outline:none;border-color:var(--navy)}
-.calc-result{background:var(--surface);border-radius:var(--radius);padding:24px;margin-top:24px}
-.calc-result-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border)}
+.calc-result{background:var(--surface);border-radius:var(--radius);padding:28px;margin-top:28px}
+.calc-result-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border)}
 .calc-result-row:last-child{border-bottom:none}
-.calc-result-row .label{font-size:14px;color:var(--gray)}
+.calc-result-row .label{font-size:14px;color:var(--muted)}
 .calc-result-row .value{font-family:'Lato',sans-serif;font-weight:700;font-size:18px;color:var(--navy)}
-.calc-result-row.total{margin-top:8px;padding-top:16px;border-top:2px solid var(--navy);border-bottom:none}
-.calc-result-row.total .label{font-family:'Montserrat',sans-serif;font-weight:700;font-size:16px;color:var(--navy)}
-.calc-result-row.total .value{font-size:24px;color:var(--green)}
+.calc-result-row.total{margin-top:12px;padding-top:20px;border-top:2px solid var(--navy);border-bottom:none}
+.calc-result-row.total .label{font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;color:var(--navy);letter-spacing:.02em}
+.calc-result-row.total .value{font-size:28px;color:var(--green)}
 
 /* COMPARISON */
 .comparison{padding:70px 0;background:var(--surface)}
@@ -176,7 +176,7 @@ footer a{color:rgba(255,255,255,.6)}
 <div class="container">
 <div class="badge">ABD DISSERTATION PATHWAY</div>
 <h1>You Did the Coursework.<br>Now Finish the Degree.</h1>
-<p>Structured dissertation support with rotating faculty mentors. No more going it alone &mdash; finish your DBA in about one year, for under $10,000.</p>
+<p>Structured dissertation support with rotating faculty mentors. No more going it alone &mdash; finish your DBA in about one year.</p>
 <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
 <a href="#calculator" class="btn-primary">Estimate Your Cost</a>
 <a href="#how" class="btn-secondary">See How It Works</a>
@@ -230,8 +230,8 @@ footer a{color:rgba(255,255,255,.6)}
 <div class="label">to complete at UBIS</div>
 </div>
 <div class="stat-card">
-<div class="number">&lt;$10K</div>
-<div class="label">total cost to finish</div>
+<div class="number">$800</div>
+<div class="label">per dissertation track</div>
 </div>
 <div class="stat-card">
 <div class="number">40 cr</div>
@@ -268,7 +268,7 @@ footer a{color:rgba(255,255,255,.6)}
 <p>Complete your manuscript, prepare for defense, and coordinate with your committee. We walk you through every step until you cross the stage.</p>
 </div>
 </div>
-<p class="track-cost">4 tracks &times; $800 = <strong>$3,200</strong> in dissertation track fees + program fees &mdash; <strong>all under $10,000 total</strong></p>
+<p class="track-cost">4 tracks &times; $800 = <strong>$3,200</strong> in dissertation track fees + program fees</p>
 </div>
 </section>
 
@@ -394,14 +394,14 @@ footer a{color:rgba(255,255,255,.6)}
 <section class="comparison">
 <div class="container">
 <h2>How UBIS ABD Compares</h2>
-<p class="subtitle">The only pathway pairing structured dissertation support with sub-$10K cost and a ~1 year timeline.</p>
+<p class="subtitle">The only pathway pairing structured dissertation support with rotating faculty and a ~1 year timeline.</p>
 <div class="comp-table-wrap">
 <table class="comp-table">
 <thead>
 <tr><th>Institution</th><th>Duration</th><th>Cost</th><th>Structured Tracks</th><th>Rotating Faculty</th></tr>
 </thead>
 <tbody>
-<tr class="ubis"><td>UBIS Global</td><td>~1 year</td><td>&lt;$10,000</td><td class="check">&#10003; 4 tracks</td><td class="check">&#10003;</td></tr>
+<tr class="ubis"><td>UBIS Global</td><td>~1 year</td><td>$3,200 + fees</td><td class="check">&#10003; 4 tracks</td><td class="check">&#10003;</td></tr>
 <tr><td>Baker College</td><td>~1.5 years</td><td>$15,000+</td><td class="cross">&#10007;</td><td class="cross">&#10007;</td></tr>
 <tr><td>Franklin University</td><td>&lt;3 years</td><td>$20,000+</td><td class="cross">&#10007;</td><td class="cross">&#10007;</td></tr>
 <tr><td>Regis College (EdD)</td><td>2-3 years</td><td>~$35,100</td><td class="cross">&#10007;</td><td class="cross">&#10007;</td></tr>
