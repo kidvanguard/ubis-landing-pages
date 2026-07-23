@@ -29,7 +29,6 @@ nav .container{display:flex;align-items:center;justify-content:space-between}
 nav a.cta-nav{background:var(--green);color:var(--white);padding:10px 22px;border-radius:var(--radius);font-family:'Montserrat',sans-serif;font-weight:700;font-size:14px;transition:opacity .2s}
 nav a.cta-nav:hover{opacity:.9}
 
-/* HERO */
 .hero{background:linear-gradient(135deg,var(--navy) 0%,#162055 100%);color:var(--white);padding:80px 0 60px;text-align:center}
 .hero h1{color:var(--white);max-width:720px;margin:0 auto 20px}
 .hero p{color:rgba(255,255,255,.8);font-size:18px;max-width:600px;margin:0 auto 32px}
@@ -39,15 +38,25 @@ nav a.cta-nav:hover{opacity:.9}
 .btn-secondary{display:inline-block;background:transparent;color:var(--white);padding:14px 36px;border-radius:var(--radius);font-family:'Montserrat',sans-serif;font-weight:700;font-size:16px;border:2px solid rgba(255,255,255,.3);transition:all .2s;cursor:pointer}
 .btn-secondary:hover{border-color:var(--white)}
 
+/* CREDIBILITY */
+.credibility{padding:60px 0;background:var(--surface)}
+.cred-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.cred-item .cred-icon{width:44px;height:44px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;color:var(--white);font-size:18px}
+.cred-item h4{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;margin-bottom:4px}
+.cred-item p{font-size:13px;color:var(--muted);line-height:1.5}
+
 /* USP STRIP */
-.usp-strip{padding:50px 0;background:var(--surface)}
-.usp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center}
-.usp-item .big{font-family:'Lato',sans-serif;font-size:clamp(32px,5vw,48px);font-weight:700;color:var(--navy);line-height:1}
+.usp-strip{padding:60px 0;background:var(--white)}
+.usp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.usp-item{text-align:center;padding:32px 24px;position:relative}
+.usp-item:not(:last-child)::after{content:'';position:absolute;right:0;top:20%;bottom:20%;width:1px;background:var(--border)}
+.usp-item .big{font-family:'Lato',sans-serif;font-size:clamp(36px,5vw,52px);font-weight:700;color:var(--navy);line-height:1}
 .usp-item .big em{font-style:normal;color:var(--green)}
-.usp-item .desc{font-size:14px;color:var(--muted);margin-top:6px}
+.usp-item .desc{font-size:14px;color:var(--muted);margin-top:8px;line-height:1.5}
+.usp-item .label{font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;color:var(--green);letter-spacing:.05em;margin-bottom:8px;text-transform:uppercase}
 
 /* CALCULATOR */
-.calculator{padding:70px 0}
+.calculator{padding:70px 0;background:var(--surface)}
 .calculator h2{text-align:center;margin-bottom:12px}
 .calculator .subtitle{text-align:center;max-width:620px;margin:0 auto 40px}
 .calc-box{max-width:700px;margin:0 auto;background:var(--white);border:1px solid var(--border);border-radius:8px;padding:36px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
@@ -56,16 +65,17 @@ nav a.cta-nav:hover{opacity:.9}
 .calc-row select{width:100%;padding:12px;border:1px solid var(--border);border-radius:var(--radius);font-size:16px;font-family:'Helvetica Neue',sans-serif;color:var(--navy);background:var(--white)}
 .calc-row select:focus{outline:none;border-color:var(--navy)}
 
-/* SLIDER */
-.slider-container{position:relative;padding:12px 0 8px}
-.slider-labels{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-top:8px}
-input[type="range"]{-webkit-appearance:none;appearance:none;width:100%;height:8px;background:linear-gradient(to right,var(--green) 0%,var(--green) var(--val,50%),var(--border) var(--val,50%),var(--border) 100%);border-radius:999px;outline:none;cursor:pointer}
-input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:28px;height:28px;background:var(--green);border-radius:50%;border:3px solid var(--white);box-shadow:0 1px 4px rgba(0,0,0,.2);cursor:pointer;transition:transform .1s}
-input[type="range"]::-webkit-slider-thumb:hover{transform:scale(1.1)}
-input[type="range"]::-moz-range-thumb{width:28px;height:28px;background:var(--green);border-radius:50%;border:3px solid var(--white);box-shadow:0 1px 4px rgba(0,0,0,.2);cursor:pointer}
-.slider-value{text-align:center;margin-top:12px}
-.slider-value .pct{font-family:'Lato',sans-serif;font-size:48px;font-weight:700;color:var(--navy);line-height:1}
-.slider-value .pct-label{font-size:14px;color:var(--muted)}
+/* CREDIT INPUT */
+.credit-input-wrap{display:flex;align-items:center;gap:16px}
+.credit-btn{width:44px;height:44px;border-radius:50%;border:2px solid var(--navy);background:var(--white);color:var(--navy);font-size:24px;font-weight:700;cursor:pointer;transition:all .15s;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.credit-btn:hover{background:var(--navy);color:var(--white)}
+.credit-btn:active{transform:scale(.95)}
+.credit-display{flex:1;text-align:center;padding:12px;background:var(--surface);border-radius:var(--radius);border:1px solid var(--border)}
+.credit-display .num{font-family:'Lato',sans-serif;font-size:48px;font-weight:700;color:var(--navy);line-height:1}
+.credit-display .num-label{font-size:13px;color:var(--muted);margin-top:4px}
+.credit-presets{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;justify-content:center}
+.credit-preset{padding:6px 14px;border-radius:999px;border:1px solid var(--border);background:var(--white);font-size:13px;font-family:'Montserrat',sans-serif;font-weight:700;color:var(--navy);cursor:pointer;transition:all .15s}
+.credit-preset:hover,.credit-preset.active{background:var(--navy);color:var(--white);border-color:var(--navy)}
 
 /* RESULTS */
 .calc-result{background:var(--surface);border-radius:var(--radius);padding:24px;margin-top:24px}
@@ -80,11 +90,11 @@ input[type="range"]::-moz-range-thumb{width:28px;height:28px;background:var(--gr
 .calc-result-row.total .value{font-size:24px;color:var(--green)}
 
 /* SPEED */
-.speed{padding:70px 0;background:var(--surface)}
+.speed{padding:70px 0}
 .speed h2{text-align:center;margin-bottom:12px}
 .speed .subtitle{text-align:center;max-width:600px;margin:0 auto 40px}
 .speed-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
-.speed-visual{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:32px;text-align:center}
+.speed-visual{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:32px;text-align:center}
 .speed-visual .classes{display:flex;gap:8px;justify-content:center;margin-bottom:16px}
 .speed-visual .class-block{width:64px;height:64px;background:var(--navy);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:var(--white);font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px}
 .speed-visual .arrow{font-size:24px;color:var(--green);margin-bottom:8px}
@@ -96,21 +106,28 @@ input[type="range"]::-moz-range-thumb{width:28px;height:28px;background:var(--gr
 .speed-points .check{width:24px;height:24px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:14px;flex-shrink:0;margin-top:2px}
 
 /* TRANSFER INFO */
-.transfer-info{padding:70px 0}
+.transfer-info{padding:70px 0;background:var(--surface)}
 .transfer-info h2{text-align:center;margin-bottom:12px}
 .transfer-info .subtitle{text-align:center;max-width:600px;margin:0 auto 40px}
-.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-.info-card{background:var(--surface);border-radius:8px;padding:28px}
-.info-card h4{font-family:'Montserrat',sans-serif;font-size:16px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:8px}
-.info-card h4 .icon{font-size:20px}
-.info-card p{font-size:14px;line-height:1.6}
-.comparison{margin-top:32px;max-width:600px;margin-left:auto;margin-right:auto}
-.comparison table{width:100%;border-collapse:collapse;font-size:14px}
-.comparison th{text-align:left;padding:10px 12px;background:var(--navy);color:var(--white);font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px}
-.comparison th:first-child{border-radius:var(--radius) 0 0 0}
-.comparison th:last-child{border-radius:0 var(--radius) 0 0}
-.comparison td{padding:10px 12px;border-bottom:1px solid var(--border)}
-.comparison tr.highlight td{background:rgba(22,158,91,.06);font-weight:700;color:var(--navy)}
+.info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.info-card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:24px}
+.info-card h4{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.info-card h4 .icon{font-size:18px}
+.info-card p{font-size:13px;line-height:1.6}
+
+/* COMPARISON */
+.comparison{padding:70px 0}
+.comparison h2{text-align:center;margin-bottom:12px}
+.comparison .subtitle{text-align:center;max-width:600px;margin:0 auto 40px}
+.comp-table-wrap{max-width:700px;margin:0 auto;background:var(--white);border-radius:8px;overflow:hidden;border:1px solid var(--border)}
+.comp-table{width:100%;border-collapse:collapse}
+.comp-table th{padding:14px 16px;text-align:left;font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;color:var(--white);background:var(--navy)}
+.comp-table th:first-child{width:30%}
+.comp-table td{padding:12px 16px;border-bottom:1px solid var(--border);font-size:14px}
+.comp-table tr:last-child td{border-bottom:none}
+.comp-table tr.ubis td{background:rgba(22,158,91,.06);font-weight:700;color:var(--navy)}
+.comp-table tr.ubis td:first-child{position:relative}
+.comp-table tr.ubis td:first-child::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--green)}
 
 /* CTA */
 .cta-section{padding:70px 0;background:var(--navy);text-align:center}
@@ -119,13 +136,20 @@ input[type="range"]::-moz-range-thumb{width:28px;height:28px;background:var(--gr
 .cta-section .btn-primary{font-size:20px;padding:16px 48px}
 .cta-section .intake-note{color:rgba(255,255,255,.5);font-size:13px;margin-top:16px}
 
-footer{padding:32px 0;background:var(--navy);border-top:1px solid rgba(255,255,255,.08);text-align:center}
+footer{padding:32px 0;background:#080e2e;text-align:center}
 footer p{color:rgba(255,255,255,.4);font-size:13px}
 footer a{color:rgba(255,255,255,.6)}
 
 @media(max-width:768px){
-.usp-grid{grid-template-columns:1fr;gap:20px}
+.cred-grid{grid-template-columns:repeat(2,1fr)}
+.usp-grid{grid-template-columns:1fr}
+.usp-item:not(:last-child)::after{display:none}
+.usp-item{border-bottom:1px solid var(--border)}
 .speed-grid{grid-template-columns:1fr}
+.info-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:480px){
+.info-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -150,20 +174,50 @@ footer a{color:rgba(255,255,255,.6)}
 </div>
 </section>
 
+<section class="credibility">
+<div class="container">
+<div class="cred-grid">
+<div class="cred-item">
+<div class="cred-icon">&#127979;</div>
+<h4>IACBE Accredited</h4>
+<p>CHEA-recognized programmatic accreditation</p>
+</div>
+<div class="cred-item">
+<div class="cred-icon">&#127758;</div>
+<h4>40+ Nationalities</h4>
+<p>Global student body across 6 continents</p>
+</div>
+<div class="cred-item">
+<div class="cred-icon">&#128187;</div>
+<h4>100% Online</h4>
+<p>8-week terms, ~9 entry dates per year</p>
+</div>
+<div class="cred-item">
+<div class="cred-icon">&#128205;</div>
+<h4>Washington DC</h4>
+<p>US-headquartered, globally delivered</p>
+</div>
+</div>
+</div>
+</section>
+
 <section class="usp-strip">
 <div class="container">
 <div class="usp-grid">
 <div class="usp-item">
+<div class="label">Credit Transfer</div>
 <div class="big"><em>70%</em></div>
-<div class="desc">max credit transfer &mdash; 2-3x the industry norm</div>
+<div class="desc">Maximum credit transfer &mdash; 2 to 3 times the industry norm of 25-33%</div>
 </div>
 <div class="usp-item">
+<div class="label">Time to Finish</div>
 <div class="big"><em>8</em> weeks</div>
-<div class="desc">fastest time to finish with max transfer</div>
+<div class="desc">Fastest completion with maximum transfer &mdash; one accelerated term</div>
 </div>
 <div class="usp-item">
+<div class="label">Out-of-Pocket Cost</div>
 <div class="big">from <em>$2,700</em></div>
-<div class="desc">out-of-pocket cost with maximum transfer</div>
+<div class="desc">Total cost to finish with maximum credits transferred</div>
 </div>
 </div>
 </div>
@@ -172,30 +226,26 @@ footer a{color:rgba(255,255,255,.6)}
 <section class="calculator" id="calculator">
 <div class="container">
 <h2>Transfer Credit Calculator</h2>
-<p class="subtitle">Slide to see how many credits you can transfer, how many courses remain, and what you'll actually pay out of pocket.</p>
+<p class="subtitle">Tell us how many credits you've already earned. We'll show you exactly how many courses remain, what it costs, and how fast you can finish.</p>
 <div class="calc-box">
 <div class="calc-row">
 <label>Choose your program</label>
 <select id="programSelect">
-<option value="36">MBA Accelerated (36 credits)</option>
-<option value="45" selected>MBA Standard / MAIR (45 credits)</option>
+<option value="36">MBA Accelerated (36 credits total)</option>
+<option value="45" selected>MBA Standard / MAIR (45 credits total)</option>
 </select>
 </div>
 <div class="calc-row">
-<label>How much of your prior coursework do you want to transfer?</label>
-<div class="slider-container">
-<input type="range" id="transferSlider" min="0" max="70" value="50" step="5">
-<div class="slider-labels">
-<span>0%</span>
-<span>25%</span>
-<span>50%</span>
-<span>70%</span>
+<label>How many credits have you already earned?</label>
+<div class="credit-input-wrap">
+<button class="credit-btn" id="creditDown" type="button">&minus;</button>
+<div class="credit-display">
+<div class="num" id="creditNum">15</div>
+<div class="num-label">credits earned</div>
 </div>
+<button class="credit-btn" id="creditUp" type="button">+</button>
 </div>
-<div class="slider-value">
-<span class="pct" id="sliderPct">50%</span>
-<span class="pct-label">of credits transferred</span>
-</div>
+<div class="credit-presets" id="creditPresets"></div>
 </div>
 <div class="calc-result">
 <div class="calc-result-row">
@@ -204,11 +254,11 @@ footer a{color:rgba(255,255,255,.6)}
 </div>
 <div class="calc-result-row">
 <span class="label">Credits transferred</span>
-<span class="value" id="resTransferCr">~23</span>
+<span class="value" id="resTransferCr">15</span>
 </div>
 <div class="calc-result-row highlight">
 <span class="label">Courses remaining at UBIS</span>
-<span class="value" id="resRemCourses">~8 courses</span>
+<span class="value" id="resRemCourses">10 courses</span>
 </div>
 <div class="calc-result-row">
 <span class="label">Cost per course</span>
@@ -216,11 +266,11 @@ footer a{color:rgba(255,255,255,.6)}
 </div>
 <div class="calc-result-row">
 <span class="label">Tuition for remaining courses</span>
-<span class="value" id="resTuition">$7,200</span>
+<span class="value" id="resTuition">$9,000</span>
 </div>
 <div class="calc-result-row">
 <span class="label">Enrollment &amp; tech fees</span>
-<span class="value" id="resFees">$600</span>
+<span class="value" id="resFees">$750</span>
 </div>
 <div class="calc-result-row">
 <span class="label">Estimated time to complete</span>
@@ -228,7 +278,7 @@ footer a{color:rgba(255,255,255,.6)}
 </div>
 <div class="calc-result-row total">
 <span class="label">Your estimated out-of-pocket cost</span>
-<span class="value" id="resTotal">$7,800</span>
+<span class="value" id="resTotal">$9,750</span>
 </div>
 </div>
 <div style="text-align:center;margin-top:24px">
@@ -256,9 +306,8 @@ footer a{color:rgba(255,255,255,.6)}
 <ul class="speed-points">
 <li><div class="check">&#10003;</div><div><strong>3 concurrent courses</strong> &mdash; Take your remaining classes simultaneously in one accelerated 8-week term.</div></li>
 <li><div class="check">&#10003;</div><div><strong>70% transfer ceiling</strong> &mdash; We accept far more transfer credits than the 25-33% industry norm.</div></li>
-<li><div class="check">&#10003;</div><div><strong>~9 intakes per year</strong> &mdash; New starts every week. No waiting for a semester to begin.</div></li>
-<li><div class="check">&#10003;</div><div><strong>100% online</strong> &mdash; Study from anywhere, on your schedule. No relocation required.</div></li>
-<li><div class="check">&#10003;</div><div><strong>IACBE-accredited</strong> &mdash; CHEA-recognized programmatic accreditation. Your degree means something.</div></li>
+<li><div class="check">&#10003;</div><div><strong>Weekly intakes</strong> &mdash; New starts every week. No waiting for a semester to begin.</div></li>
+<li><div class="check">&#10003;</div><div><strong>IACBE-accredited degree</strong> &mdash; CHEA-recognized. Your credential carries weight with employers worldwide.</div></li>
 </ul>
 </div>
 </div>
@@ -271,33 +320,39 @@ footer a{color:rgba(255,255,255,.6)}
 <div class="info-grid">
 <div class="info-card">
 <h4><span class="icon">&#127758;</span> International Credits</h4>
-<p>We apply recognized international grade equivalency standards. Transcripts from universities worldwide are evaluated &mdash; no need to have studied in the US.</p>
+<p>We apply recognized international grade equivalency standards. Transcripts from universities worldwide are evaluated.</p>
 </div>
 <div class="info-card">
 <h4><span class="icon">&#128188;</span> Professional Experience</h4>
 <p>5+ years of managerial-level work experience can qualify for up to 6 US graduate credits through Prior Learning Assessment.</p>
 </div>
 <div class="info-card">
-<h4><span class="icon">&#127891;</span> Regional &amp; National Schools</h4>
-<p>Credits from regionally accredited US institutions, national universities, and recognized international schools all qualify for evaluation.</p>
+<h4><span class="icon">&#127891;</span> Any Accredited School</h4>
+<p>Credits from regionally accredited US institutions, national universities, and recognized international schools all qualify.</p>
 </div>
 <div class="info-card">
 <h4><span class="icon">&#128203;</span> Grade Requirements</h4>
-<p>Transfer credits need a B or better (or equivalent). Courses must be relevant to your program. We evaluate every transcript individually.</p>
+<p>Transfer credits need a B or better (or equivalent). Courses must be relevant to your program. We evaluate every transcript.</p>
 </div>
 </div>
-<div class="comparison">
-<h3 style="text-align:center;margin-bottom:16px;font-family:'Lato',sans-serif;font-weight:700;font-size:20px">How UBIS Compares on Transfer</h3>
-<table>
+</div>
+</section>
+
+<section class="comparison">
+<div class="container">
+<h2>How UBIS Compares on Transfer</h2>
+<p class="subtitle">The highest transfer ceiling in the market, at a fraction of the cost.</p>
+<div class="comp-table-wrap">
+<table class="comp-table">
 <thead>
-<tr><th>Institution</th><th>Max Transfer</th><th>Typical Out-of-Pocket</th></tr>
+<tr><th>Institution</th><th>Max Transfer</th><th>Typical Out-of-Pocket</th><th>Time to Finish</th></tr>
 </thead>
 <tbody>
-<tr class="highlight"><td>UBIS Global</td><td>Up to 70%</td><td>From ~$2,700</td></tr>
-<tr><td>Liberty University</td><td>Up to 50%</td><td>$8,000+</td></tr>
-<tr><td>Walden University</td><td>~40%</td><td>$12,000+</td></tr>
-<tr><td>Capella University</td><td>~25%</td><td>$15,000+</td></tr>
-<tr><td>Typical public online</td><td>~25-33%</td><td>$12,000+</td></tr>
+<tr class="ubis"><td>UBIS Global</td><td>Up to 70%</td><td>From ~$2,700</td><td>As few as 8 weeks</td></tr>
+<tr><td>Liberty University</td><td>Up to 50%</td><td>$8,000+</td><td>6-12 months</td></tr>
+<tr><td>Walden University</td><td>~40%</td><td>$12,000+</td><td>12-18 months</td></tr>
+<tr><td>Capella University</td><td>~25%</td><td>$15,000+</td><td>18-24 months</td></tr>
+<tr><td>Typical public online</td><td>~25-33%</td><td>$12,000+</td><td>12-18 months</td></tr>
 </tbody>
 </table>
 </div>
@@ -320,45 +375,75 @@ footer a{color:rgba(255,255,255,.6)}
 </footer>
 
 <script>
-const slider=document.getElementById('transferSlider');
 const programSelect=document.getElementById('programSelect');
+const creditDown=document.getElementById('creditDown');
+const creditUp=document.getElementById('creditUp');
+const creditNumEl=document.getElementById('creditNum');
+const presetsWrap=document.getElementById('creditPresets');
 
-function updateSliderBg(){
-const val=slider.value;
-slider.style.setProperty('--val',val+'%');
-document.getElementById('sliderPct').textContent=val+'%';
+let currentCredits=15;
+
+function getMaxTransfer(){
+const total=parseInt(programSelect.value);
+return Math.round(total*0.7);
+}
+
+function buildPresets(){
+const max=getMaxTransfer();
+const steps=[];
+for(let i=0;i<=max;i+=3)steps.push(i);
+presetsWrap.innerHTML='';
+steps.forEach(v=>{
+const btn=document.createElement('button');
+btn.className='credit-preset'+(v===currentCredits?' active':'');
+btn.textContent=v+' cr';
+btn.type='button';
+btn.addEventListener('click',()=>{currentCredits=v;updateCalc();});
+presetsWrap.appendChild(btn);
+});
 }
 
 function updateCalc(){
-const pct=parseInt(slider.value);
 const totalCr=parseInt(programSelect.value);
-const costPerCourse=totalCr===36?900:900;
-const maxTransferCr=Math.round(totalCr*(pct/100));
-const remainingCr=totalCr-maxTransferCr;
+const maxTransfer=getMaxTransfer();
+if(currentCredits>maxTransfer)currentCredits=maxTransfer;
+if(currentCredits<0)currentCredits=0;
+
+creditNumEl.textContent=currentCredits;
+
+const remainingCr=totalCr-currentCredits;
 const remCourses=Math.ceil(remainingCr/3);
+const costPerCourse=900;
 const tuition=remCourses*costPerCourse;
 const fees=Math.max(remCourses*75,300);
 const total=tuition+fees;
 
 let timeEst;
-if(remCourses<=3)timeEst='8 weeks (1 term)';
+if(remCourses<=0)timeEst='Done!';
+else if(remCourses<=3)timeEst='8 weeks (1 term)';
 else if(remCourses<=6)timeEst='~2-3 months';
 else if(remCourses<=9)timeEst='~4 months';
 else if(remCourses<=12)timeEst='~5-6 months';
 else timeEst='~'+Math.ceil(remCourses/3*2)+' months';
 
 document.getElementById('resTotalCr').textContent=totalCr;
-document.getElementById('resTransferCr').textContent='~'+maxTransferCr;
+document.getElementById('resTransferCr').textContent=currentCredits;
 document.getElementById('resRemCourses').textContent=remCourses<=0?'0 courses':remCourses+' course'+(remCourses!==1?'s':'');
 document.getElementById('resTuition').textContent='$'+tuition.toLocaleString();
 document.getElementById('resFees').textContent='$'+fees.toLocaleString();
-document.getElementById('resTime').textContent=remCourses<=0?'Done!':'~'+timeEst;
+document.getElementById('resTime').textContent=timeEst;
 document.getElementById('resTotal').textContent='$'+total.toLocaleString();
-updateSliderBg();
+
+document.querySelectorAll('.credit-preset').forEach(b=>{
+b.classList.toggle('active',parseInt(b.textContent)===currentCredits);
+});
 }
 
-slider.addEventListener('input',updateCalc);
-programSelect.addEventListener('change',updateCalc);
+creditDown.addEventListener('click',()=>{currentCredits=Math.max(0,currentCredits-3);updateCalc();});
+creditUp.addEventListener('click',()=>{currentCredits=Math.min(getMaxTransfer(),currentCredits+3);updateCalc();});
+programSelect.addEventListener('change',()=>{if(currentCredits>getMaxTransfer())currentCredits=getMaxTransfer();buildPresets();updateCalc();});
+
+buildPresets();
 updateCalc();
 </script>
 </body>
