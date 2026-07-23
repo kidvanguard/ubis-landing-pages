@@ -29,7 +29,7 @@ nav .container{display:flex;align-items:center;justify-content:space-between}
 nav a.cta-nav{background:var(--green);color:var(--white);padding:10px 22px;border-radius:var(--radius);font-family:'Montserrat',sans-serif;font-weight:700;font-size:14px;transition:opacity .2s}
 nav a.cta-nav:hover{opacity:.9}
 
-.hero{background:linear-gradient(135deg,var(--navy) 0%,#162055 100%);color:var(--white);padding:80px 0 60px;text-align:center}
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#162055 100%);color:var(--white);padding:90px 0 70px;text-align:center}
 .hero h1{color:var(--white);max-width:720px;margin:0 auto 20px}
 .hero p{color:rgba(255,255,255,.8);font-size:18px;max-width:600px;margin:0 auto 32px}
 .hero .badge{display:inline-block;background:rgba(22,158,91,.15);border:1px solid rgba(22,158,91,.4);color:#4FD68C;padding:6px 16px;border-radius:999px;font-size:13px;font-family:'Montserrat',sans-serif;font-weight:700;margin-bottom:20px;letter-spacing:.03em}
@@ -56,14 +56,17 @@ nav a.cta-nav:hover{opacity:.9}
 .usp-item .label{font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;color:var(--green);letter-spacing:.05em;margin-bottom:8px;text-transform:uppercase}
 
 /* CALCULATOR */
-.calculator{padding:70px 0;background:var(--surface)}
+.calculator{padding:80px 0;background:var(--surface)}
 .calculator h2{text-align:center;margin-bottom:12px}
 .calculator .subtitle{text-align:center;max-width:620px;margin:0 auto 40px}
-.calc-box{max-width:700px;margin:0 auto;background:var(--white);border:1px solid var(--border);border-radius:8px;padding:36px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
-.calc-row{margin-bottom:28px}
-.calc-row label{display:block;font-family:'Montserrat',sans-serif;font-weight:700;font-size:14px;margin-bottom:10px;color:var(--navy)}
-.calc-row select{width:100%;padding:12px;border:1px solid var(--border);border-radius:var(--radius);font-size:16px;font-family:'Helvetica Neue',sans-serif;color:var(--navy);background:var(--white)}
-.calc-row select:focus{outline:none;border-color:var(--navy)}
+.calc-box{max-width:720px;margin:0 auto;background:var(--white);border-radius:12px;padding:44px;box-shadow:0 20px 60px rgba(0,0,0,.08)}
+.calc-section{margin-bottom:32px}
+.calc-section-title{font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;color:var(--navy);letter-spacing:.04em;text-transform:uppercase;margin-bottom:14px}
+.toggle-group{display:flex;gap:10px;flex-wrap:wrap}
+.toggle-btn{padding:12px 20px;border:1.5px solid var(--border);border-radius:var(--radius);background:var(--white);font-size:14px;font-family:'Helvetica Neue',sans-serif;color:var(--navy);cursor:pointer;transition:all .15s;font-weight:400}
+.toggle-btn:hover{border-color:var(--navy)}
+.toggle-btn.active{background:var(--navy);color:var(--white);border-color:var(--navy);font-weight:700}
+.toggle-btn .sub{display:block;font-size:11px;opacity:.7;margin-top:2px;font-weight:400}
 
 /* CREDIT INPUT */
 .credit-input-wrap{display:flex;align-items:center;gap:16px}
@@ -78,19 +81,19 @@ nav a.cta-nav:hover{opacity:.9}
 .credit-preset:hover,.credit-preset.active{background:var(--navy);color:var(--white);border-color:var(--navy)}
 
 /* RESULTS */
-.calc-result{background:var(--surface);border-radius:var(--radius);padding:24px;margin-top:24px}
-.calc-result-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border)}
+.calc-result{background:var(--surface);border-radius:var(--radius);padding:28px;margin-top:32px}
+.calc-result-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border)}
 .calc-result-row:last-child{border-bottom:none}
-.calc-result-row .label{font-size:14px;color:var(--gray)}
+.calc-result-row .label{font-size:14px;color:var(--muted)}
 .calc-result-row .value{font-family:'Lato',sans-serif;font-weight:700;font-size:18px;color:var(--navy)}
-.calc-result-row.highlight{background:rgba(22,158,91,.06);margin:8px -24px;padding:12px 24px;border-radius:var(--radius);border-bottom:none}
+.calc-result-row.highlight{background:rgba(22,158,91,.06);margin:8px -28px;padding:12px 28px;border-radius:var(--radius);border-bottom:none}
 .calc-result-row.highlight .value{color:var(--green)}
-.calc-result-row.total{margin-top:8px;padding-top:16px;border-top:2px solid var(--navy);border-bottom:none}
-.calc-result-row.total .label{font-family:'Montserrat',sans-serif;font-weight:700;font-size:16px;color:var(--navy)}
-.calc-result-row.total .value{font-size:24px;color:var(--green)}
+.calc-result-row.total{margin-top:12px;padding-top:20px;border-top:2px solid var(--navy);border-bottom:none}
+.calc-result-row.total .label{font-family:'Montserrat',sans-serif;font-weight:700;font-size:15px;color:var(--navy);letter-spacing:.02em}
+.calc-result-row.total .value{font-size:28px;color:var(--green)}
 
 /* SPEED */
-.speed{padding:70px 0}
+.speed{padding:80px 0}
 .speed h2{text-align:center;margin-bottom:12px}
 .speed .subtitle{text-align:center;max-width:600px;margin:0 auto 40px}
 .speed-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
@@ -106,7 +109,7 @@ nav a.cta-nav:hover{opacity:.9}
 .speed-points .check{width:24px;height:24px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:14px;flex-shrink:0;margin-top:2px}
 
 /* TRANSFER INFO */
-.transfer-info{padding:70px 0;background:var(--surface)}
+.transfer-info{padding:80px 0;background:var(--surface)}
 .transfer-info h2{text-align:center;margin-bottom:12px}
 .transfer-info .subtitle{text-align:center;max-width:600px;margin:0 auto 40px}
 .info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
@@ -116,7 +119,7 @@ nav a.cta-nav:hover{opacity:.9}
 .info-card p{font-size:13px;line-height:1.6}
 
 /* COMPARISON */
-.comparison{padding:70px 0}
+.comparison{padding:80px 0}
 .comparison h2{text-align:center;margin-bottom:12px}
 .comparison .subtitle{text-align:center;max-width:600px;margin:0 auto 40px}
 .comp-table-wrap{max-width:700px;margin:0 auto;background:var(--white);border-radius:8px;overflow:hidden;border:1px solid var(--border)}
@@ -130,7 +133,7 @@ nav a.cta-nav:hover{opacity:.9}
 .comp-table tr.ubis td:first-child::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--green)}
 
 /* CTA */
-.cta-section{padding:70px 0;background:var(--navy);text-align:center}
+.cta-section{padding:80px 0;background:var(--navy);text-align:center}
 .cta-section h2{color:var(--white);margin-bottom:12px}
 .cta-section p{color:rgba(255,255,255,.7);max-width:500px;margin:0 auto 28px}
 .cta-section .btn-primary{font-size:20px;padding:16px 48px}
@@ -147,6 +150,7 @@ footer a{color:rgba(255,255,255,.6)}
 .usp-item{border-bottom:1px solid var(--border)}
 .speed-grid{grid-template-columns:1fr}
 .info-grid{grid-template-columns:repeat(2,1fr)}
+.toggle-group{flex-direction:column}
 }
 @media(max-width:480px){
 .info-grid{grid-template-columns:1fr}
@@ -228,15 +232,15 @@ footer a{color:rgba(255,255,255,.6)}
 <h2>Transfer Credit Calculator</h2>
 <p class="subtitle">Tell us how many credits you've already earned. We'll show you exactly how many courses remain, what it costs, and how fast you can finish.</p>
 <div class="calc-box">
-<div class="calc-row">
-<label>Choose your program</label>
-<select id="programSelect">
-<option value="36">MBA Accelerated (36 credits total)</option>
-<option value="45" selected>MBA Standard / MAIR (45 credits total)</option>
-</select>
+<div class="calc-section">
+<div class="calc-section-title">Choose your program</div>
+<div class="toggle-group" id="programToggles">
+<button class="toggle-btn" data-value="36">MBA Accelerated<span class="sub">36 credits total</span></button>
+<button class="toggle-btn active" data-value="45">MBA Standard / MAIR<span class="sub">45 credits total</span></button>
 </div>
-<div class="calc-row">
-<label>How many credits have you already earned?</label>
+</div>
+<div class="calc-section">
+<div class="calc-section-title">How many credits have you already earned?</div>
 <div class="credit-input-wrap">
 <button class="credit-btn" id="creditDown" type="button">&minus;</button>
 <div class="credit-display">
@@ -281,7 +285,7 @@ footer a{color:rgba(255,255,255,.6)}
 <span class="value" id="resTotal">$9,750</span>
 </div>
 </div>
-<div style="text-align:center;margin-top:24px">
+<div style="text-align:center;margin-top:28px">
 <a href="https://ubisglobal.com" class="btn-primary" target="_blank">Get a Free Credit Evaluation</a>
 </div>
 </div>
@@ -375,18 +379,28 @@ footer a{color:rgba(255,255,255,.6)}
 </footer>
 
 <script>
-const programSelect=document.getElementById('programSelect');
 const creditDown=document.getElementById('creditDown');
 const creditUp=document.getElementById('creditUp');
 const creditNumEl=document.getElementById('creditNum');
 const presetsWrap=document.getElementById('creditPresets');
 
 let currentCredits=15;
+let selectedProgram=45;
 
 function getMaxTransfer(){
-const total=parseInt(programSelect.value);
-return Math.round(total*0.7);
+return Math.round(selectedProgram*0.7);
 }
+
+document.querySelectorAll('#programToggles .toggle-btn').forEach(btn=>{
+btn.addEventListener('click',()=>{
+document.querySelectorAll('#programToggles .toggle-btn').forEach(b=>b.classList.remove('active'));
+btn.classList.add('active');
+selectedProgram=parseInt(btn.dataset.value);
+if(currentCredits>getMaxTransfer())currentCredits=getMaxTransfer();
+buildPresets();
+updateCalc();
+});
+});
 
 function buildPresets(){
 const max=getMaxTransfer();
@@ -404,7 +418,7 @@ presetsWrap.appendChild(btn);
 }
 
 function updateCalc(){
-const totalCr=parseInt(programSelect.value);
+const totalCr=selectedProgram;
 const maxTransfer=getMaxTransfer();
 if(currentCredits>maxTransfer)currentCredits=maxTransfer;
 if(currentCredits<0)currentCredits=0;
@@ -441,7 +455,6 @@ b.classList.toggle('active',parseInt(b.textContent)===currentCredits);
 
 creditDown.addEventListener('click',()=>{currentCredits=Math.max(0,currentCredits-3);updateCalc();});
 creditUp.addEventListener('click',()=>{currentCredits=Math.min(getMaxTransfer(),currentCredits+3);updateCalc();});
-programSelect.addEventListener('change',()=>{if(currentCredits>getMaxTransfer())currentCredits=getMaxTransfer();buildPresets();updateCalc();});
 
 buildPresets();
 updateCalc();
